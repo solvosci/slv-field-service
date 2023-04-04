@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_fsm_person_request_workers_tree" model="ir.ui.view">
+        <field name="name">fsm_person (FSM Order Request Workers)</field>
+        <field name="model">fsm.person</field>
+        <field name="inherit_id" ref="fieldservice.fsm_person_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree//field[@name='email']" position="after">
+                <field name="vehicle" />
+                <field name="payments_salary" />
+                <field name="payments_km" />
+                <field name="payments_diets" />
+                <field name="payments_advance"  />
+                <field name="net_salary" />
+                <field name="currency_id" invisible= '1' />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_fsm_person_request_workers_form" model="ir.ui.view">
+        <field name="name">fsm.person.form (FSM Order Request Workers)</field>
+        <field name="model">fsm.person</field>
+        <field name="inherit_id" ref="fieldservice.fsm_person_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook//page//.." position="inside">
+                 <page name="salary" string="Salary">
+                    <group>
+                        <group>
+                        <field name="vehicle" />
+                        <field name="payments_salary" />
+                        <field name="payments_km" />
+                        </group>
+                        <group>
+                            <field name="payments_diets" />
+                            <field name="payments_advance" />
+                            <field name="net_salary" />
+                            <field name="currency_id" invisible="1" />
+                        </group>   
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

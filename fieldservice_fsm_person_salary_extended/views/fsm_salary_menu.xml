@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="fsm_salary_action" model="ir.actions.act_window">
+        <field name="name">Salary</field>
+        <field name="res_model">fsm.salary</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem 
+            id="fsm_salary_menu_item"
+            parent="fieldservice.data"
+            action="fsm_salary_action"
+            sequence="32"
+    />
+
+</odoo>

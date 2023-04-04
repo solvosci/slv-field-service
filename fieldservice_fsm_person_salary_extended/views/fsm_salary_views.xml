@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_fsm_person_salary_extend_tree" model="ir.ui.view">
+        <field name="name">fsm.salary.tree (FSM Person Salary Extended)</field>
+        <field name="model">fsm.salary</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle" />
+                <field name="fsm_person_id" />
+                <field name="payments_salary" />
+                <field name="vehicle" />
+                <field name="payments_km" />
+                <field name="payments_diets" />
+                <field name="payments_advance" />
+                <field name="net_salary" />
+                <field name="currency_id" invisible= '1' />
+            </tree>
+        </field>
+    </record>
+
+</odoo>

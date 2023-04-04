@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_fsm_order_request_workers_tree" model="ir.ui.view">
+        <field name="name">fsm.order.tree (FSM Order Request Workers)</field>
+        <field name="model">fsm.order</field>
+        <field name="inherit_id" ref="fieldservice.fsm_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group//field[@name='person_ids']//tree" position="inside">
+                <field name="vehicle" />
+                <field name="payments_salary" />
+                <field name="payments_km" />
+                <field name="payments_diets" />
+                <field name="payments_advance" />
+                <field name="net_salary" />
+            </xpath>
+        </field>
+    </record>
+    
+</odoo>

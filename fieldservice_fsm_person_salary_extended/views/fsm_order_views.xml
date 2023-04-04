@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_fsm_person_salary_extend_form" model="ir.ui.view">
+        <field name="name">fsm.order.form (FSM Person Salary Extended)</field>
+        <field name="model">fsm.order</field>
+        <field name="inherit_id" ref="fieldservice.fsm_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group//field[@name='person_ids']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//group[@name='request_workers']" position="after">
+                <group  name='salary_line' string=" FSM Salary Line">
+                        <field name="fsm_salary_ids" nolabel="1" >
+                            <tree editable="bottom" >
+                                <field name="sequence" widget="handle" />
+                                <field name="fsm_person_id" />
+                                <field name="payments_salary" />
+                                <field name="vehicle" />
+                                <field name="payments_km" />
+                                <field name="payments_diets" />
+                                <field name="payments_advance" />
+                                <field name="net_salary" />
+                                <field name="currency_id" invisible= '1' />
+                            </tree>
+                       </field> 
+                 </group>
+            </xpath> 
+        </field>
+
+    </record>
+  
+</odoo>
