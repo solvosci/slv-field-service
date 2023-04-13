@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="fsm_order_salary_action" model="ir.actions.act_window">
+        <field name="name">Workers Salary</field>
+        <field name="res_model">fsm.order.salary</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="view_fsm_person_salary_extend_tree_readonly"/>
+        <field name="context">{'hide_fsm_order_fields': False}</field>
+    </record>
+
+    <menuitem 
+            id="fsm_order_salary_menu_item"
+            parent="fieldservice.reporting"
+            action="fsm_order_salary_action"
+            sequence="32"
+    />
+
+</odoo>

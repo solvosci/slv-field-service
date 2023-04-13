@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_fsm_person_salary_extend_tree" model="ir.ui.view">
+        <field name="name">fsm.order.salary.tree (FSM Person Salary Extended)</field>
+        <field name="model">fsm.order.salary</field>
+        <field name="arch" type="xml">
+            <tree create="1" editable="bottom">
+                <field
+                    name="fsm_order_id"
+                    widget="many2onebutton"
+                    invisible="context.get('hide_fsm_order_fields', True)"
+                />
+                <field name="sequence" widget="handle" />
+                <field name="fsm_person_id" />
+                <field 
+                    name="scheduled_date_start" 
+                    widget="many2onebutton"
+                    invisible="context.get('hide_fsm_order_fields', True)"/>
+                <field
+                    name="location_id"
+                    widget="many2onebutton"
+                    invisible="context.get('hide_fsm_order_fields', True)"
+                    optional="hide"
+                    />
+                <field name="vehicle" widget="boolean_toggle" />
+                <field
+                    name="payments_salary" 
+                    groups="fieldservice.group_fsm_dispatcher"
+                    sum="Payments Salary" 
+                    />
+                <field
+                    name="payments_km"
+                    groups="fieldservice.group_fsm_dispatcher"
+                    sum="Payments Km" 
+                    />
+                <field 
+                    name="payments_diets"
+                    groups="fieldservice.group_fsm_dispatcher"
+                    sum="Payments Diets" 
+                    />
+                <field 
+                    name="payments_advance"
+                    groups="fieldservice.group_fsm_dispatcher"
+                    sum="Payments Advance" 
+                    />
+                <field 
+                    name="net_salary"
+                    groups="fieldservice.group_fsm_dispatcher"
+                    sum="Total" 
+                    />
+                <field name="currency_id" invisible= '1' />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_fsm_person_salary_extend_tree_readonly" model="ir.ui.view">
+        <field name="name">fsm.order.salary.tree (FSM Person Salary Extended)</field>
+        <field name="model">fsm.order.salary</field>
+        <field
+            name="inherit_id"
+            ref="fieldservice_person_salary.view_fsm_person_salary_extend_tree"
+        />
+        <field name="mode">primary</field>
+        <field eval="100" name="priority"/>
+        <field name="arch" type="xml">
+            <xpath expr="." position="attributes">
+                <attribute name="create">0</attribute>
+            </xpath>
+            <xpath expr="." position="attributes">
+                <attribute name="edit">0</attribute>
+            </xpath>
+            <xpath expr="//field[@name='sequence']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_fsm_person_salary_extend_search" model="ir.ui.view">
+        <field name="name">fsm.order.salary.filter (FSM Person Salary Extended)</field>
+        <field name="model">fsm.order.salary</field>
+        <field name="arch" type="xml">
+            <search string="Order Salary">
+                <field name="fsm_person_id"/>
+                <field name="location_id"/>
+                <field name="scheduled_date_start" />
+                <separator/>
+                <filter
+                    name="with_vehicle"
+                    domain="[('vehicle','=',True)]"
+                    string="With vehicle"
+                />
+                <filter
+                    name="without_vehicle"
+                    domain="[('vehicle','=',False)]"
+                    string="Without vehicle"
+                />
+                <separator/>
+                <filter name="scheduled_date_start" date="scheduled_date_start" />
+                <separator/>
+                    <group expand="0" string="Group By">
+                    <filter
+                        name="fsm_order_id"
+                        context="{'group_by':'fsm_order_id'}"
+                    /> 
+                    <filter
+                        name="location_id"
+                        context="{'group_by':'location_id'}"
+                    /> 
+                    <filter name="scheduled_date_start" 
+                        date="scheduled_date_start"
+                        context="{'group_by':'scheduled_date_start'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record> 
+
+</odoo>
