@@ -1,1 +1,2 @@
 field-service
+slv-crm https://github.com/solvosci/slv-crm
