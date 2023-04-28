@@ -8,7 +8,7 @@
     """,
     "author": "Solvos",
     "license": "AGPL-3",
-    "version": "15.0.1.0.0",
+    "version": "15.0.1.1.0",
     "category": "Field Service",
     "website": "https://github.com/solvosci/slv-field-service",
     "depends": ["fieldservice"],
@@ -17,6 +17,7 @@
         "views/fsm_order_views.xml",
         "views/fsm_order_salary_views.xml",
         "views/fsm_order_salary_menu.xml",
+        "reports/fsm_order_template.xml",
     ],
     "installable": True,
 }
