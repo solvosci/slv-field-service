@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template
+        id="report_fsm_order_document_sale_reference"
+        inherit_id="fieldservice.report_fsm_order_document"
+    >
+        <xpath expr="//t[@t-if='doc.template_id']" position="after">
+            <t t-if="doc.sale_reference">
+                <span> - <span t-field="doc.sale_reference" /></span>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>
