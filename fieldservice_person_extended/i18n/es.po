@@ -1,0 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_person_extended
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-02 07:42+0000\n"
+"PO-Revision-Date: 2023-05-02 09:43+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#. module: fieldservice_person_extended
+#: model:ir.model.fields,field_description:fieldservice_person_extended.field_fsm_person__acc_number
+msgid "Acc Number"
+msgstr "CC"
+
+#. module: fieldservice_person_extended
+#: model:ir.model,name:fieldservice_person_extended.model_fsm_person
+msgid "Field Service Worker"
+msgstr ""
+
+#. module: fieldservice_person_extended
+#: model:ir.model.fields,field_description:fieldservice_person_extended.field_fsm_person__vat
+msgid "VAT"
+msgstr "DNI"
