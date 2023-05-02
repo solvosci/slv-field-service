@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="views_fsm_order_kanban_schdate_inherit" model="ir.ui.view">
+        <field name="name">fsm.order.kanban (in fieldservice_order_kanban_schdate)</field>
+        <field name="model">fsm.order</field>
+        <field name="inherit_id" ref="fieldservice.fsm_order_kanban_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='color']" position="after">
+                <field name="scheduled_date_start" />
+            </xpath>
+            <xpath expr="//div//field[@name='location_id']" position="after">
+                <div>
+                    <field name="scheduled_date_start"/>
+                </div>
+            </xpath>
+            <xpath expr="//kanban" position="attributes">
+                <attribute name="default_order">scheduled_date_start</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
