@@ -5,16 +5,12 @@
         <field name="model">fsm.order.salary</field>
         <field
             name="inherit_id"
-            ref="fieldservice_person_salary.view_fsm_person_salary_extend_tree"
-        />
+            ref="fieldservice_person_salary.view_fsm_person_salary_extend_tree" />
         <field name="arch" type="xml">
-            <field name="location_id" position="after">
-                <field
-                    name="sale_reference_salary"
-                    widget="many2onebutton"
-                    invisible="context.get('hide_fsm_order_fields', True)"
-                    optional="hide"
-                />
+            <field name="fsm_order_id" position="after">
+                <field 
+                    name="sale_reference_salary" widget="many2onebutton" 
+                    invisible="context.get('hide_fsm_order_fields', True)" />
             </field>
         </field>
     </record>
