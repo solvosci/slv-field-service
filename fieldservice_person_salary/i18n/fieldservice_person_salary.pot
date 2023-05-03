@@ -6,14 +6,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-28 08:19+0000\n"
-"PO-Revision-Date: 2023-04-28 08:19+0000\n"
+"POT-Creation-Date: 2023-05-03 07:21+0000\n"
+"PO-Revision-Date: 2023-05-03 07:21+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: fieldservice_person_salary
+#: model:ir.model.fields,field_description:fieldservice_person_salary.field_fsm_order_salary__acc_number
+msgid "Acc Number"
+msgstr ""
 
 #. module: fieldservice_person_salary
 #: model:ir.model.fields,field_description:fieldservice_person_salary.field_fsm_order_salary__payments_advance
@@ -191,8 +196,24 @@ msgid "Start Date:"
 msgstr ""
 
 #. module: fieldservice_person_salary
+#: model:ir.model.fields,field_description:fieldservice_person_salary.field_fsm_order_salary__task
+#: model_terms:ir.ui.view,arch_db:fieldservice_person_salary.report_fsm_order_document_person_salary
+msgid "Task"
+msgstr ""
+
+#. module: fieldservice_person_salary
+#: model:ir.model.fields,field_description:fieldservice_person_salary.field_fsm_order_salary__task_date
+msgid "Task Date"
+msgstr ""
+
+#. module: fieldservice_person_salary
 #: model_terms:ir.ui.view,arch_db:fieldservice_person_salary.view_fsm_person_salary_extend_tree
 msgid "Total"
+msgstr ""
+
+#. module: fieldservice_person_salary
+#: model:ir.model.fields,field_description:fieldservice_person_salary.field_fsm_order_salary__vat
+msgid "VAT"
 msgstr ""
 
 #. module: fieldservice_person_salary

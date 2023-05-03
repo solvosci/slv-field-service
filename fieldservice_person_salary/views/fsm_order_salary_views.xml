@@ -23,6 +23,18 @@
                     invisible="context.get('hide_fsm_order_fields', True)"
                     optional="hide"
                     />
+                <field name="task" />
+                <field name="task_date" />
+                <field
+                    name="vat"
+                    invisible="context.get('hide_fsm_order_fields', True)"
+                    optional="hide"
+                    />
+                <field
+                    name="acc_number"
+                    invisible="context.get('hide_fsm_order_fields', True)"
+                    optional="hide"
+                    />
                 <field name="vehicle" widget="boolean_toggle" />
                 <field
                     name="payments_salary" 

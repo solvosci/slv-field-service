@@ -25,6 +25,7 @@
                         <thead style="display: table-row-group">
                             <tr>
                                 <th name="th_worker" class="text-left">Worker</th>
+                                <th name="th_task" class="text-left">Task</th>
                                 <th name="th_vehicle" class="text-left">Vehicle</th>
                             </tr>
                         </thead>
@@ -32,6 +33,7 @@
                             <t t-foreach="doc.fsm_salary_ids" t-as="line">
                                 <tr>
                                     <td name="td_worker"><span t-field="line.fsm_person_id.name" /></td>
+                                    <td name="td_task"><span t-field="line.task" /></td>
                                     <td name="td_vehicle">
                                         <t t-if="line.vehicle">
                                             Yes
