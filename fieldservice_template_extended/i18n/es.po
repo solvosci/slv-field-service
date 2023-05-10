@@ -1,0 +1,43 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_template_extended
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-10 10:25+0000\n"
+"PO-Revision-Date: 2023-05-10 12:29+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. module: fieldservice_template_extended
+#: model:ir.model.fields,field_description:fieldservice_template_extended.field_fsm_template__collaborator_instructions
+#: model_terms:ir.ui.view,arch_db:fieldservice_template_extended.fsm_order_template_extend
+#: model_terms:ir.ui.view,arch_db:fieldservice_template_extended.view_fsm_order_fsm_template_extended_form
+#: model_terms:ir.ui.view,arch_db:fieldservice_template_extended.view_fsm_template_extended_form
+msgid "Collaborator Instructions"
+msgstr "Instrucciones de Terceros"
+
+#. module: fieldservice_template_extended
+#: model:ir.model.fields,field_description:fieldservice_template_extended.field_fsm_order__collaborator_todo
+#, fuzzy
+msgid "Collaborator Todo"
+msgstr "Orden de Terceros"
+
+#. module: fieldservice_template_extended
+#: model:ir.model,name:fieldservice_template_extended.model_fsm_order
+msgid "Field Service Order"
+msgstr "Campo Servicio Trabajado"
+
+#. module: fieldservice_template_extended
+#: model:ir.model,name:fieldservice_template_extended.model_fsm_template
+#, fuzzy
+msgid "Field Service Order Template"
+msgstr "Salario de servicio de campo"
