@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_fsm_order_fsm_template_extended_form" model="ir.ui.view">
+        <field name="name">fsm.order.form (in fieldservice_template_extended)</field>
+        <field name="model">fsm.order</field>
+        <field name="inherit_id" ref="fieldservice.fsm_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='instructions_page']" position="after">
+                <page string="Collaborator Instructions" name="collaborator_instructions_page">
+                    <group string="Collaborator Instructions" name="collaborator_instructions">
+                        <field name="collaborator_todo" nolabel="1" />
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
