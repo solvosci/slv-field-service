@@ -1,0 +1,97 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_equipment_extended
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-12 10:36+0000\n"
+"PO-Revision-Date: 2023-05-12 10:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: fieldservice_equipment_extended
+#: model:ir.model.fields,field_description:fieldservice_equipment_extended.field_fsm_equipment_note__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: fieldservice_equipment_extended
+#: model:ir.model.fields,field_description:fieldservice_equipment_extended.field_fsm_equipment_note__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: fieldservice_equipment_extended
+#: model:ir.model.fields,field_description:fieldservice_equipment_extended.field_fsm_equipment_note__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: fieldservice_equipment_extended
+#: model_terms:ir.ui.view,arch_db:fieldservice_equipment_extended.report_fsm_order_document_equipment_note
+msgid "Equipment"
+msgstr ""
+
+#. module: fieldservice_equipment_extended
+#: model_terms:ir.ui.view,arch_db:fieldservice_equipment_extended.report_fsm_order_document_equipment_note
+msgid "Equipment and materials"
+msgstr ""
+
+#. module: fieldservice_equipment_extended
+#: model:ir.model,name:fieldservice_equipment_extended.model_fsm_order
+msgid "Field Service Order"
+msgstr ""
+
+#. module: fieldservice_equipment_extended
+#: model:ir.model.fields,field_description:fieldservice_equipment_extended.field_fsm_equipment_note__fms_equipment_id
+msgid "Fms Equipment"
+msgstr ""
+
+#. module: fieldservice_equipment_extended
+#: model:ir.model.fields,field_description:fieldservice_equipment_extended.field_fsm_order__fsm_equipment_ids
+msgid "Fsm Equipment"
+msgstr ""
+
+#. module: fieldservice_equipment_extended
+#: model:ir.model.fields,field_description:fieldservice_equipment_extended.field_fsm_equipment_note__fsm_order_id
+msgid "Fsm Order"
+msgstr ""
+
+#. module: fieldservice_equipment_extended
+#: model:ir.model.fields,field_description:fieldservice_equipment_extended.field_fsm_equipment_note__id
+msgid "ID"
+msgstr ""
+
+#. module: fieldservice_equipment_extended
+#: model:ir.model.fields,field_description:fieldservice_equipment_extended.field_fsm_equipment_note____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: fieldservice_equipment_extended
+#: model:ir.model.fields,field_description:fieldservice_equipment_extended.field_fsm_equipment_note__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: fieldservice_equipment_extended
+#: model:ir.model.fields,field_description:fieldservice_equipment_extended.field_fsm_equipment_note__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: fieldservice_equipment_extended
+#: model:ir.model.fields,field_description:fieldservice_equipment_extended.field_fsm_equipment_note__observation
+#: model_terms:ir.ui.view,arch_db:fieldservice_equipment_extended.report_fsm_order_document_equipment_note
+msgid "Observation"
+msgstr ""
+
+#. module: fieldservice_equipment_extended
+#: model:ir.model.fields,field_description:fieldservice_equipment_extended.field_fsm_equipment_note__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: fieldservice_equipment_extended
+#: model:ir.model,name:fieldservice_equipment_extended.model_fsm_equipment_note
+msgid "fsm.equipment.note"
+msgstr ""

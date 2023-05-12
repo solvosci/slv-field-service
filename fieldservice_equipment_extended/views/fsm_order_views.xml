@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="fieldservice_equipment_extended_form_views" model="ir.ui.view">
+        <field name="name">fsm.order.form (in fieldservice_equipment_extended)</field>
+        <field name="model">fsm.order</field>
+        <field name="inherit_id" ref="fieldservice.fsm_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='equipment_ids']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//page[@name='equipements_page']" position="inside">
+               <group>
+                    <field name="fsm_equipment_ids" nolabel="1" editable="bottom" >  
+                        <tree create="1" editable="bottom">
+                            <field name="sequence" widget="handle" />
+                            <field name="fms_equipment_id" />
+                            <field name="observation" />
+                        </tree>
+                    </field>
+                </group>
+            </xpath>
+        </field>
+    </record>
+    
+</odoo>
