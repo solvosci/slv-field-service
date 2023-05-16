@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template
+        id="report_fsm_order_document_equipment_note"
+        inherit_id="fieldservice.report_fsm_order_document">
+        <xpath expr="//div[@id='resolution']" position="before">
+            <div t-if="doc.fsm_equipment_note_ids" id="equipments">
+                <h3>Equipments and materials</h3>
+                <table class="table table-sm o_main_table" name="equipment_table">
+                    <thead style="display: table-row-group">
+                        <tr>
+                            <th name="th_equipment" class="text-left">Equipment</th>
+                            <th name="th_note" class="text-left">Note</th>
+                        </tr>
+                    </thead>
+                    <tbody class="equipment_tbody">
+                        <t t-foreach="doc.fsm_equipment_note_ids" t-as="line">
+                            <tr>
+                                <td name="td_equipment"><span t-field="line.fsm_equipment_id.name" /></td>
+                                <td name="td_note"><span t-field="line.note" /></td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>
