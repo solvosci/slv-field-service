@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="fsm_equipment_note_tree_views" model="ir.ui.view">
+        <field name="name">fsm.equipment.note.tree (in FSM Equipment Note)</field>
+        <field name="model">fsm.equipment.note</field>
+        <field name="arch" type="xml">
+            <tree create="0">
+                <field name="fsm_order_id" />
+                <!-- field name="sale_reference" / -->
+                <field name="scheduled_date_start" />
+                <field name="fsm_equipment_id" />
+                <field name="note" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="fsm_equipment_note_search_views" model="ir.ui.view">
+        <field name="name">fsm.equipment.note.search (in FSM Equipment Note)</field>
+        <field name="model">fsm.equipment.note</field>
+        <field name="arch" type="xml">
+            <search string="Equipment Note">
+                <field name="fsm_order_id" />
+                <!-- field name="sale_reference" / -->
+                <field name="fsm_equipment_id" />
+                <field name="note" />
+                <separator /> 
+                <filter
+                    name="scheduled_date_start"
+                    date="scheduled_date_start" />
+                <separator />
+                <group expand="0" string="Group By">
+                    <filter name="fsm_equipment_id" 
+                        context="{'group_by':'fsm_equipment_id'}" />
+                    <filter name="fsm_order_id"  
+                        context="{'group_by':'fsm_order_id'}" />
+                    <filter name="scheduled_date_start" 
+                        context="{'group_by':'scheduled_date_start'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+</odoo>
