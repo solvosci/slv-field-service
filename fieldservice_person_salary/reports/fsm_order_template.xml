@@ -3,21 +3,20 @@
 
     <template
         id="report_fsm_order_document_person_salary"
-        inherit_id="fieldservice.report_fsm_order_document"
-    >
+        inherit_id="fieldservice.report_fsm_order_document" >
 
-        <xpath expr="//div[@id='description']" position="after">
+        <xpath expr="//div[@id='description']" position="before">
             <div id="planning">
                 <h3>Planning</h3>
                 <div class="row">
                     <div class="col-4">
-                        <span>Start Date: <span t-field="doc.scheduled_date_start"/></span>
+                        <span style="font-weight: bold;"> Start Date: <span  t-field="doc.scheduled_date_start"/> </span> 
                     </div>
                     <div class="col-4">
-                        <span>End Date: <span t-field="doc.scheduled_date_end"/></span>
+                        <span style="font-weight: bold;"> End Date: <span t-field="doc.scheduled_date_end"/> </span>
                     </div>
                     <div class="col-4">
-                        <span>Duration: <span t-field="doc.scheduled_duration" t-options="{'widget': 'duration', 'digital': True, 'unit': 'hour', 'round': 'minute'}"/></span>
+                        <span style="font-weight: bold;"> Duration: <span t-field="doc.scheduled_duration" t-options="{'widget': 'duration', 'digital': True, 'unit': 'hour', 'round': 'minute'}"/> </span>
                     </div>
                 </div>
                 <t t-if="doc.fsm_salary_ids">
@@ -25,6 +24,7 @@
                         <thead style="display: table-row-group">
                             <tr>
                                 <th name="th_worker" class="text-left">Worker</th>
+                                <th name="th_task" class="text-left">Task</th>
                                 <th name="th_vehicle" class="text-left">Vehicle</th>
                             </tr>
                         </thead>
@@ -32,6 +32,7 @@
                             <t t-foreach="doc.fsm_salary_ids" t-as="line">
                                 <tr>
                                     <td name="td_worker"><span t-field="line.fsm_person_id.name" /></td>
+                                    <td name="td_task"><span t-field="line.task" /></td>
                                     <td name="td_vehicle">
                                         <t t-if="line.vehicle">
                                             Yes

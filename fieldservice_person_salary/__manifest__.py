@@ -8,10 +8,10 @@
     """,
     "author": "Solvos",
     "license": "AGPL-3",
-    "version": "15.0.1.1.0",
+    "version": "15.0.1.3.0",
     "category": "Field Service",
     "website": "https://github.com/solvosci/slv-field-service",
-    "depends": ["fieldservice"],
+    "depends": ["fieldservice", "fieldservice_sale_reference"],
     "data": [
         "security/ir.model.access.csv",
         "views/fsm_order_views.xml",

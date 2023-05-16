@@ -33,7 +33,10 @@ class FSMOrderSalary(models.Model):
         index=True, 
         store=True)
     customer_id = fields.Many2one('res.partner', string="Contact")
-
+    task = fields.Char()
+    task_date = fields.Datetime()
+    vat = fields.Char(related='fsm_person_id.vat', string="VAT")
+    acc_number = fields.Char(related='fsm_person_id.acc_number')
 
     @api.depends('payments_salary','payments_km','payments_diets','payments_advance')
     def _compute_net_salary (self):
