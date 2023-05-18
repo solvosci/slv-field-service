@@ -13,7 +13,7 @@
             id="fsm_order_salary_menu_item"
             parent="fieldservice.reporting"
             action="fsm_order_salary_action"
-            sequence="32"
+            sequence="5"
     />
 
 </odoo>
