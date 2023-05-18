@@ -244,7 +244,7 @@ msgstr "Trabajador"
 #: model:ir.ui.menu,name:fieldservice_person_salary.fsm_order_salary_menu_item
 #: model_terms:ir.ui.view,arch_db:fieldservice_person_salary.view_fieldservice_fsm_person_salary_extend
 msgid "Workers Salary"
-msgstr "Salarios de los trabajadores"
+msgstr "Actividades de Trabajadores"
 
 #. module: fieldservice_person_salary
 #: model_terms:ir.ui.view,arch_db:fieldservice_person_salary.report_fsm_order_document_person_salary
