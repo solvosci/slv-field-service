@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="fsm_equipment_note_sale_reference_tree_views" model="ir.ui.view">
+        <field name="name">fsm.equipment.note.tree (in FSM Equipment Note Sale Reference) </field>
+        <field name="model">fsm.equipment.note</field>
+        <field name="inherit_id" ref="fieldservice_equipment_note.fsm_equipment_note_tree_views" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='fsm_order_id']" position="after">
+                <field name="sale_reference" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="fsm_equipment_note_sale_reference_search_views" model="ir.ui.view">
+        <field name="name">fsm.equipment.note.search (in FSM Equipment Note Sale Reference) </field>
+        <field name="model">fsm.equipment.note</field>
+        <field name="inherit_id" ref="fieldservice_equipment_note.fsm_equipment_note_search_views" />
+        <field name="arch" type="xml">
+            <xpath expr="//search//field[@name='fsm_order_id']" position="after">
+                <field name="sale_reference" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
