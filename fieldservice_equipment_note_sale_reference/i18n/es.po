@@ -1,0 +1,28 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_equipment_note_sale_reference
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 09:22+0000\n"
+"PO-Revision-Date: 2023-05-22 11:32+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. module: fieldservice_equipment_note_sale_reference
+#: model:ir.model,name:fieldservice_equipment_note_sale_reference.model_fsm_equipment_note
+msgid "Equipment notes on FSM Order"
+msgstr ""
+
+#. module: fieldservice_equipment_note_sale_reference
+#: model:ir.model.fields,field_description:fieldservice_equipment_note_sale_reference.field_fsm_equipment_note__sale_reference
+msgid "Reference"
+msgstr "Referencia"
