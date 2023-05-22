@@ -4,7 +4,7 @@ from odoo import models, fields, api
 
 
 class FSMOrderSalary(models.Model):
-    _name = "fsm.order.salary"
+    _name = "fsm.order.salary"   
     _description = "Field Service Order Salary"
 
     # TODO fill this field // use display_name if needed
