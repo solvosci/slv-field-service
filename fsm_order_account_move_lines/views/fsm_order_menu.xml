@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="fsm_order_account_move_live_action" model="ir.actions.act_window">
+        <field name="name">Invoices and expenses</field>
+        <field name="res_model">account.move.line</field>
+        <field name="view_id" ref="account_move_line_views_tree_readonly"/>
+        <field name="view_mode">tree</field>
+        <field name="domain">[('fsm_order_id','!=',False)]</field>
+    </record>
+    <menuitem 
+        id="fsm_order_account_move_live_menu_item"
+        parent="fieldservice.reporting"
+        action="fsm_order_account_move_live_action"
+        sequence="7" />
+</odoo>
