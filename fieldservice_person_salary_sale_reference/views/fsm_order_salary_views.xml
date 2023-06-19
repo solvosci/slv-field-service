@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="view_fsm_person_salary_tree" model="ir.ui.view">
-        <field name="name">fsm.order.salary.tree (in fieldservice_person_salary_sale_reference)</field>
-        <field name="model">fsm.order.salary</field>
-        <field
-            name="inherit_id"
-            ref="fieldservice_person_salary.view_fsm_person_salary_extend_tree" />
-        <field name="arch" type="xml">
-            <field name="fsm_order_id" position="after">
-                <field 
-                    name="sale_reference_salary" widget="many2onebutton" 
-                    invisible="context.get('hide_fsm_order_fields', True)" />
-            </field>
-        </field>
-    </record>
-
     <record id="view_fsm_person_salary_search" model="ir.ui.view">
         <field name="name">fsm.order.salary.filter (in fieldservice_person_salary_sale_reference)</field>
         <field name="model">fsm.order.salary</field>
