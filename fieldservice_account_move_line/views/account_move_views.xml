@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="fieldservice_account_move_line_form" model="ir.ui.view">
+        <field name="name">fieldservice.account.move.line.form (in Field Service Account Move Line)</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='line_ids']/tree/field[@name='analytic_tag_ids']"
+                position="after"
+            >
+                <field name="fsm_order_id" groups="fieldservice.group_fsm_dispatcher"/>
+            </xpath>
+            <xpath
+                expr="//field[@name='line_ids']/form//field[@name='analytic_tag_ids']"
+                position="after"
+            >
+                <field name="fsm_order_id"  groups="fieldservice.group_fsm_dispatcher" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

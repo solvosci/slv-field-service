@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="account_move_line_views_tree_readonly" model="ir.ui.view">
+        <field name="name">account.move.line.tree (in Field Service Account Move Line)</field>
+        <field name="model">account.move.line</field>
+        <field eval="101" name="priority"/>
+        <field name="arch" type="xml">
+            <tree create="0" >
+                <field name="fsm_order_id" />
+                <field name="scheduled_date_start" />
+                <field name="move_id" />
+                <field name="ref" />
+                <field name="date" />
+                <field name="product_id" />
+                <field name="name" />
+                <field name="debit" />
+                <field name="credit" />
+            </tree>
+        </field>
+    </record>
+    <record id="account_move_line_views_search_fsm" model="ir.ui.view">
+        <field name="name">account.move.line.search for FSM (in fieldservice_account_move_line)</field>
+        <field name="model">account.move.line</field>
+        <field name="inherit_id" ref="account.view_account_move_line_filter"/>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='reconcile_model_id']" position="after">
+                <field name="fsm_order_id" string="FSM Order"/>
+                <field name="ref" string="Reference"/>
+                <field name="product_id" string="Product"/>
+                <field name="name" string="Label"/>
+            </xpath>
+            <xpath expr="//filter[@name='date']" position="after">
+                <filter
+                name="scheduled_date_start"
+                date="scheduled_date_start" />
+            </xpath>
+            <xpath expr="//filter[@name='journal']" position="after">
+                <filter name="fsm_order_id" 
+                    context="{'group_by':'fsm_order_id'}" />
+                <filter name="product_id" 
+                    context="{'group_by':'product_id'}" />
+            </xpath>
+            <xpath expr="//filter[@name='groupby_date']" position="after">
+                <filter name="scheduled_date_start" 
+                    context="{'group_by':'scheduled_date_start'}" />
+            </xpath>
+        </field>
+    </record> 
+</odoo>

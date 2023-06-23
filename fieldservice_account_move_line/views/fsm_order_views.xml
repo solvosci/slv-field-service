@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="fieldservice_account_move_line_form_views" model="ir.ui.view">
+        <field name="name">fieldservice.account.move.line.form (in Field Service Account Move Line)</field>
+        <field name="model">fsm.order</field>
+        <field name="inherit_id" ref="fieldservice.fsm_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='equipements_page']" position="after">
+                <group  name="invoice_expenses" 
+                string="Invoice" groups="account.group_account_invoice">
+                    <field name="account_move_line_ids" nolabel="1" readonly="1">
+                        <tree>
+                            <field name="move_id" />
+                            <field name="date" />
+                            <field name="product_id" />
+                            <field name="name" />
+                            <field name="debit" />
+                            <field name="credit" />
+                        </tree>
+                    </field>
+                </group>
+            </xpath> 
+        </field>
+    </record>
+</odoo>
